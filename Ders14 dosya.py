@@ -1,0 +1,42 @@
+# -*- coding: cp1254 -*-
+"""
+1.Dosyanýn açýlmasý (dosya:veri.txt)
+    r => read,okuma
+    w => write, yazma (ÝÇÝNDEKÝLER KAYBOLUR!)
+    a => append, ekleme (hem okuma hem de yazma)
+2.Dosya üzerindeki iþlemlerin yapýlmasý
+    r => read,okuma
+    w => write,yazma
+3.Dosyanýn kapatýlmasý
+    close =>kapatma
+"""
+
+dosya = open("veri.txt","r")
+
+#print dir(dosya)
+
+satirlar = dosya.readlines()
+#dosyanýn içindekileri satýr satýr yazar
+for satir in satirlar:
+    print satir
+
+
+print dosya.readline()
+#her seferinde bir satýrý yazar
+
+print dosya.read()
+
+dosya.close()
+
+dosya = open("veri.txt","w")
+dosya.write("Yunus Gümüþsoy\nElma Armut")
+dosya.close()
+
+dosya = open("veri.txt","a")
+dosya.write("\nYunus Gümüþsoy\nElma Armut")
+dosya.close()
+
+dosya = open("veri.txt","a")
+for i in range(100):
+    dosya.write("\nYunus Gümüþsoy\nElma Armut")
+dosya.close()

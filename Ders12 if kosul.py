@@ -1,0 +1,8 @@
+# -*- coding: cp1254 -*-
+yas = input("Yaþýnýzý giriniz: ")
+print "Girilen Deðer: ",yas
+if yas < 18:
+    print "Reþit Deðilsiniz"
+if yas > 18:
+    print "Reþitsiniz"
+

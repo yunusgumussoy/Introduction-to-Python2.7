@@ -1,0 +1,36 @@
+# -*- coding: cp1254 -*-
+from __future__ import division
+print """1.Toplama
+2.Çýkarma
+3.Çarpma
+4.Bölme
+5.Mod Alma
+6.Üs Alma"""
+
+islem = input ("Lütfen iþlemi seçiniz: ")
+sayi1 = input("Ýlk Sayýyý Giriniz: ")
+sayi2 = input("Ýkinci Sayýyý Giriniz: ")
+
+if islem == 1:
+    print "Sonuç = ", sayi1+sayi2
+#her seferinde if kullanmak yerine elif(else if) kullanarak programý hýzlandýrýyoruz
+elif islem == 2:
+    print "Sonuç = ", sayi1-sayi2
+
+elif islem == 3:
+    print "Sonuç = ", sayi1*sayi2
+
+elif islem == 4:
+    if sayi2 == 0:
+        print "Bölen 0'a eþit olamaz."
+    if sayi2 != 0:
+        print "Sonuç = ", sayi1/sayi2
+
+elif islem == 5:
+    print "Sonuç = ", sayi1%sayi2
+
+elif islem == 6:
+    print "Sonuç = ", sayi1**sayi2
+
+else:
+    print "Lütfen 1-6 arasýnda bir sayý girin."
